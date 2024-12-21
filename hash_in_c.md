@@ -46,7 +46,6 @@
 ## 解题代码
 ### 接口
 ```c
-int lengthOfLongestSubstring(char* s) {
 	int s_len; // 字符串长度
 	int count; //最长不重复字符串的长度
 
@@ -56,35 +55,39 @@ int lengthOfLongestSubstring(char* s) {
 	// 对应 hash[]中字节的位置： index = 120 / 32 = 3
 	// 对应 字节中位的位置：position = 120 $ 32 = 24
 	// 则 x 可在hash中被标记：hash[index] |= 1<<position
-	unsigned int hash[4]; // 哈希 32 x 4 = 128
+	unsigned int hash[4] = {0}; // 哈希 32 x 4 = 128
 
 	count = 0;
 	for (s_len = 0; *(s+s_len) != '\0'; s_len++); // 获得 s 的长度
 
+	int r_ptr = 0; // 右边界指针
+	int index; // 字符的索引
+	int position; // 整型变量内部偏移
+	char c;
 	for (int i = 0; i < s_len; i++) {
-		int j;
 
-		int index;
-		int position;
+		// 滑动左边界：取消对 s[i-1]的标记
+		if (i > 0) {
+			c = s[i-1];
+			index = (c - 0) / 32;
+			position = (c - 0) % 32;
+			hash[index] &= ~((unsigned int)1<<position); //将 s[i]存于 hash中
+		}
 
-		//初始化 hash
-		hash[0] = 0;
-		hash[1] = 0;
-		hash[2] = 0;
-		hash[3] = 0;
-		for (j = i; j < s_len; j++) {
-			char c = s[j];
+		for (; r_ptr < s_len;) {
+			c = s[r_ptr];
 
 			index = (c - 0) / 32;
 			position = (c - 0) % 32;
 			if (hash[index] & (unsigned int)1<<position) {
 				break; //已经被标记过
 			} else {
-				hash[index] |= (unsigned int)1<<position; //将 s[i]存于 hash中
+				hash[index] |= (unsigned int)1<<position; //将 s[r_ptr]存于 hash中
+				r_ptr++; // 滑动右边界
 			}
 		}
 		
-		count = count > j-i ? count : j-i;
+		count = count > r_ptr-i ? count : r_ptr-i;
 	}
 
 	return count;
