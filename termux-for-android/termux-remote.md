@@ -17,38 +17,40 @@
 ## 安装 proot 和 proot-distro
 * 点击打开 termux 软件  
 ![](./pictures/open-termux.png)  
-* 更新源和软件
-```shell
-pkg upgrade
-```
-* 输入一些指令进行安装(安装proot-distro是需要满足能访问github)：  
+* 安装方式
+    * pkg 安装
+    ```shell
+    pkg upgrade
+    pkg install proot proot-distro
+    ```
+    * apt 安装
+    ```shell
+    apt install proot proot-distro
+    ```
 >NOTE: <u>然而笔者还是更喜欢在键盘上敲命令，所以选择了远程连接(远程连接到 termux)的方式进行后续操作，当然在远程连接之前的准备工作，还是需要在 termux 中敲命令的。</u>
-```
-pkg install proot proot-distro
-```
 ## 安装 ubuntu
 * 查看可以安装哪些 linux 版本: `proot-distro list`
 ![](./pictures/install-ubuntu.png)
-* 安装linux（笔者选择 Ubuntu (24.04),即 ubuntu:
+* 安装linux（笔者选择 Ubuntu 24.04,即 ubuntu, 安装时需要满足能访问github):
 ```shell
 proot-distro install ubuntu
 ```
 * 启动linux: `proot-distro login ubuntu`
 ![](./pictures/login-ubuntu.png)
 ## 远程连接到 termux
-1. 安装ssh服务器
+1. 让电脑和手机连接同一个局域网
+2. 安装ssh服务器
 ```shell
 pkg install openssh
 ```
-2. 启动ssh
+3. 启动ssh
 ```shell
 sshd
 ```
-3. 查看ip地址、sshd端口号、用户名、密码
-    *  查看ip：`ifconfig`
-    * 设置sshd端口号：`sshd -p 9000`
+4. 查看ip地址、sshd端口号、用户名、密码
     * 查看用户名：`whoami`
     * 设置用户密码：`passwd`
-4. 让电脑和手机连接同一个局域网
+    * 查看ip：`ifconfig 2>&1 | grep -oP "192\.168\.[0-9]+\.[0-9]+" | head -n 1`
+    * 设置sshd端口号：`sshd -p 9000`
 5. 在电脑上远程连接:`ssh <user_name>@<ip> -p <port>`, 然后输入密码即可登陆：
 ![](./pictures/remote-login.png)
