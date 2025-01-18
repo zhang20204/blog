@@ -1,3 +1,7 @@
+---
+title: C语言中巧用哈希
+---
+
 # C语言中巧用哈希
 ## 前言
 &emsp;今天在刷 **leetcode** 的时候遇到一个 [简单题目](https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/)，要求求出字符串中的最大的不重复字符的字串长度。  

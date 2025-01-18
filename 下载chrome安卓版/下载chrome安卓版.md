@@ -1,6 +1,8 @@
+---
+title: 如何下载 google chrome 安卓版
+---
 [toc]
 
-<u></u>
 # 如何下载 google chrome 安卓版
 ## 解决科学上网的问题
 [科学上网](https://github.com/zhang20204/tools/blob/main/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.md)
