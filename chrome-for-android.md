@@ -8,19 +8,19 @@ title: 如何下载 google chrome 安卓版
 [科学上网](https://github.com/zhang20204/tools/blob/main/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.md)
 ## 找到 chrome 在google play中的url
 1. 打开[google play](https://play.google.com/store/games)，并选中 **手机**
-    ![](./google-play/google-play-url.png)
+    ![](./chrome-for-android/google-play/google-play-url.png)
 2. 在搜索栏中搜索 "chrome"
-    ![](./google-play/search-chrome.png)
+    ![](./chrome-for-android/google-play/search-chrome.png)
 3. 点击 **Google Chrome 浏览器**
-    ![](./google-play/click-chrome.png)
+    ![](./chrome-for-android/google-play/click-chrome.png)
 4. 点击 **分享**
-    ![](./google-play/get-chrome-url.png)
+    ![](./chrome-for-android/google-play/get-chrome-url.png)
 5. 复制 url
 ##  下载 chrome
 1. 打开 [apk-downloader](https://apps.evozi.com/apk-downloader/)
-    ![](./apk-downloader/apk-downloader-ui.png)
+    ![](./chrome-for-android/apk-downloader/apk-downloader-ui.png)
 2. 将在 **google play** 中复制的 url  粘贴到里面 ,点击 **Generate Download Line** 生成下载链接
-    ![](./apk-downloader/download-chrome.png)
+    ![](./chrome-for-android/apk-downloader/download-chrome.png)
 3. 点击 **Click here to download com.android.chrome now** 下载即可下载chrome apk
 
 # 趣事
