@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 }
 ```
 * 编译运行结果:  
-![](./compiling.png)  
+![](./c-function-arg/compiling.png)  
 run 时则提示 **段错误**  
 ## 解决
 1. 对于 **warning** 来说，在 arr 传入函数是直接强制类型转换即可:
