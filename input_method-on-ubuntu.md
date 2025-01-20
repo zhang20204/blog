@@ -1,5 +1,6 @@
 ---
 title: ubuntu 中使用中文输入法
+toc: true
 ---
 
 # ubuntu中使用中文输入法

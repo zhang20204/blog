@@ -1,7 +1,7 @@
 ---
 title 在安卓手机中使用linxu虚拟机
+toc: true
 ---
-[toc]
 
 # 在安卓手机中使用linxu虚拟机
 ## 简介

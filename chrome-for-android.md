@@ -1,5 +1,6 @@
 ---
 title: 如何下载 google chrome 安卓版
+toc: true
 ---
 [toc]
 
